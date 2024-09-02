@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-    <div className="homepage">
-      i'm home page
-    </div>
+    <h1 className="text-2xl text-center">
+      aqsa is here
+    </h1>
   );
 }
