@@ -1,8 +1,8 @@
 'use client'
-import Link from "next/link"
+import Link from "next/link";
 import { HoverEffect } from "./ui/card-hover-effect";
 
-function UpcomingWebinars() {
+export default function UpcomingWebinars() {
   const featuredWebinars = [
     {
       title: "Understanding Music Theory",
@@ -48,6 +48,7 @@ function UpcomingWebinars() {
       isFeatured: true,
     },
   ];
+
   return (
     <div className="p-12 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -62,11 +63,13 @@ function UpcomingWebinars() {
 
         <div className="mt-10">
           <HoverEffect
-            items={featuredWebinars.map((webinar) => ({
+            items={featuredWebinars.map(webinar => (
+              {
               title: webinar.title,
               description: webinar.description,
               link: "/",
-            }))}
+            }
+          ))}
           />
         </div>
 
@@ -82,5 +85,3 @@ function UpcomingWebinars() {
     </div>
   );
 }
-
-export default UpcomingWebinars;
